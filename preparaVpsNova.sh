@@ -1,5 +1,5 @@
 #!/bin/bash
-mysqlRootPassword="minhaSenhaDevoALTERAR123" ##a senha de root do mysql para sua senha definitiva de root
+mysqlRootPassword="501578" ##a senha de root do mysql para sua senha definitiva de root
 adduser deploy
 usermod -aG sudo deploy
 sudo -H -u deploy bash -c "mkdir /home/deploy/setup/"
@@ -18,7 +18,7 @@ mysql -u root -B -N -e "
     FLUSH PRIVILEGES;
 "
 cd /home/deploy/setup
-sudo -H -u deploy bash -c "git clone https://github.com/canove/whaticket whaticket"
+sudo -H -u deploy bash -c "git clone https://github.com/vemfazer/whaticket-versao-03-12-canal-vem-fazer.git whaticket"
 #sudo -H -u deploy bash -c "git clone https://github.com/w3nder/whaticket whaticket" #seu repositorio 
 sudo env PATH=\$PATH:/usr/bin pm2 startup ubuntu -u deploy --hp /home/deploy
 sudo -H -u deploy bash -c "pm2 save"
