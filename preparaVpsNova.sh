@@ -18,7 +18,7 @@ mysql -u root -B -N -e "
     FLUSH PRIVILEGES;
 "
 cd /home/deploy/setup
-sudo -H -u deploy bash -c "git clone https://github.com/vemfazer/whaticket-versao-03-12-canal-vem-fazer.git whaticket"
+sudo -H -u deploy bash -c "sudo -H -u deploy bash -c "git clone https://github.com/canove/whaticket whaticket"
 #sudo -H -u deploy bash -c "git clone https://github.com/w3nder/whaticket whaticket" #seu repositorio 
 sudo env PATH=\$PATH:/usr/bin pm2 startup ubuntu -u deploy --hp /home/deploy
 sudo -H -u deploy bash -c "pm2 save"
