@@ -1,5 +1,5 @@
 #!/bin/bash
-mysqlRootPassword="501578" ##a senha de root do mysql para sua senha definitiva de root
+mysqlRootPassword="Asm501578" ##a senha de root do mysql para sua senha definitiva de root
 adduser deploy
 usermod -aG sudo deploy
 sudo -H -u deploy bash -c "mkdir /home/deploy/setup/"
