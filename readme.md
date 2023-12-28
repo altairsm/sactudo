@@ -20,7 +20,7 @@ _mysqlTablePassword="minhasenhamysql!"_ ## Adicione a senha que deseja utilizar 
 
 > git clone https://github.com/altairsm/sactudo
 > 
-> cd ./sactudo/instalador
+> cd ./sactudo
 > 
 > sudo chmod +x preparaVpsNova.sh
 > 
