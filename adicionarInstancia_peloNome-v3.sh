@@ -45,6 +45,8 @@ EOF1
 
 sudo -H -u deploy bash -c "npm install --prefix /home/deploy/${instName}/backend"
 sudo -H -u deploy bash -c "npm run build --prefix /home/deploy/${instName}/backend"
+cd /home
+sudo chmod -R 777 deploy/${instName}
 cd /home/deploy/${instName}/backend/
 npx sequelize db:migrate
 npx sequelize db:seed:all
