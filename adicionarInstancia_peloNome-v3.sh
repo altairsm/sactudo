@@ -19,7 +19,7 @@ frontendPort="3${numberSequencial3Digites}"
 
 
 
-echo 'please enter mysql root user password'cd 
+echo 'Asm501578'cd 
 
 mysql -u root -p${mysqlRootPassword} -B -N -e "
     CREATE USER '${instName}'@'%' IDENTIFIED BY '${mysqlTablePassword}';
