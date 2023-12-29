@@ -19,7 +19,7 @@ frontendPort="3${numberSequencial3Digites}"
 
 
 
-echo 'Asm501578'cd 
+echo 'please enter mysql root user password'cd 
 
 mysql -u root -p${mysqlRootPassword} -B -N -e "
     CREATE USER '${instName}'@'%' IDENTIFIED BY '${mysqlTablePassword}';
@@ -45,8 +45,6 @@ EOF1
 
 sudo -H -u deploy bash -c "npm install --prefix /home/deploy/${instName}/backend"
 sudo -H -u deploy bash -c "npm run build --prefix /home/deploy/${instName}/backend"
-cd /home
-sudo chmod -R 777 deploy/${instName}
 cd /home/deploy/${instName}/backend/
 npx sequelize db:migrate
 npx sequelize db:seed:all
